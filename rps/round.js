@@ -28,7 +28,16 @@ class Round{
      */
     getComputerSelection() {
         //*********************************ADD CODE HERE *************************************/
-        // Use Math.floor and select a random Selections enumerator from above 
+        // Use Math.floor and select a random Selections enumerator from above
+        let select = Math.floor(Math.random()*3);
+
+        if (select == 0) {
+            return Selections.ROCK;
+        } else if (select == 1) {
+            return Selections.PAPER;
+        } else {
+            return Selections.SCISSORS;
+        };
     }
 
     /**
@@ -40,10 +49,24 @@ class Round{
     determineWinner() {
         //*********************************ADD CODE HERE *************************************/
         // Use this.playerSelection and this.computerSelection to return the appropriate outcome from the Outcomes enumerator above.
+        if (this.playerSelection == this.computerSelection) {
+            return Outcomes.TIE;
+        } else if (this.playerSelection == Selections.ROCK && this.computerSelection == Selections.SCISSORS) {
+            return Outcomes.PLAYER_WINS;
+        } else if (this.playerSelection == Selections.ROCK && this.computerSelection == Selections.PAPER) {
+            return Outcomes.COMPUTER_WINS;
+        } else if (this.playerSelection == Selections.PAPER && this.computerSelections == Selections.ROCK) {
+            return Outcomes.PLAYER_WINS;
+        } else if (this.playerSelection == Selections.PAPER && this.computerSelections == Selections.SCISSORS) {
+            return Outcomes.COMPUTER_WINS;
+        } else if (this.playerSelection == Selections.SCISSORS && this.computerSelections == Selections.PAPER) {
+            return Outcomes.PLAYER_WINS;
+        } else if (this.playerSelection == Selections.SCISSORS && this.computerSelections == Selections.ROCK) {
+            return Outcomes.COMPUTER_WINS;
+        } else {
+            return "blah blah blah you messed up";
+        }
     }
-
-
-
 }
 
 

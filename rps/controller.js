@@ -27,7 +27,7 @@ function playGame() {
 
     //*********************************ADD CODE HERE *************************************/
     // Display the Final Score from the properties stored in the Game object
-    console.log(`FINAL SCORE [Player Score: ${game.countOfPlayerWins}    Computer Score: ${game.countOfComputerWins}]`);
+    alert(`FINAL SCORE [Player Score: ${game.countOfPlayerWins}    Computer Score: ${game.countOfComputerWins}]`);
 }
 
 /**
@@ -77,7 +77,7 @@ function getPlayerSelection() {
     let playerSelection = prompt('Rock, paper, or scissors?')
 
     if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
-        console.log('Error: Player selection is invalid')
+        alert('Error: Player selection is invalid');
     } else {
         return playerSelection;
     };

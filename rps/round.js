@@ -55,17 +55,15 @@ class Round{
             return Outcomes.PLAYER_WINS;
         } else if (this.playerSelection == Selections.ROCK && this.computerSelection == Selections.PAPER) {
             return Outcomes.COMPUTER_WINS;
-        } else if (this.playerSelection == Selections.PAPER && this.computerSelections == Selections.ROCK) {
+        } else if (this.playerSelection == Selections.PAPER && this.computerSelection == Selections.ROCK) {
             return Outcomes.PLAYER_WINS;
-        } else if (this.playerSelection == Selections.PAPER && this.computerSelections == Selections.SCISSORS) {
+        } else if (this.playerSelection == Selections.PAPER && this.computerSelection == Selections.SCISSORS) {
             return Outcomes.COMPUTER_WINS;
-        } else if (this.playerSelection == Selections.SCISSORS && this.computerSelections == Selections.PAPER) {
+        } else if (this.playerSelection == Selections.SCISSORS && this.computerSelection == Selections.PAPER) {
             return Outcomes.PLAYER_WINS;
-        } else if (this.playerSelection == Selections.SCISSORS && this.computerSelections == Selections.ROCK) {
+        } else if (this.playerSelection == Selections.SCISSORS && this.computerSelection == Selections.ROCK) {
             return Outcomes.COMPUTER_WINS;
-        } else {
-            return "blah blah blah you messed up";
-        }
+        };
     }
 }
 
